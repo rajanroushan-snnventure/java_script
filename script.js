@@ -351,15 +351,137 @@ var markMass = 18;
 
  //ar.push('Ashok');
  //ar.pop();
- ar.unshift('Mr.');
- ar.shift();
+ //ar.unshift('Mr.');
+ //ar.shift();
+ ar.push(prompt('what\'s the next? '))
  console.log(ar.indexOf(1992));
 */
+
 //Today EOD 12/10/20
 /***********************************************
  * Asignment  13/10/20
+ * john and his family bill array - 124,48,268.
+ * waiter tip - if >50 then 20%, in between 50 to 200 then 15% & more than 200 then 10%.
+ * 
+ */
+/*
+ var waiterTip = function(billAmount){
+    
+     if(billAmount <= 50){
+        var tip = billAmount*0.20;
+        alert('Bill 50 '+ tip);
+     }else if(billAmount > 50 && billAmount < 200){
+        var tip = billAmount*0.15;
+        alert('Bill between 50-200 ' + tip);
+     }else{
+        var tip = billAmount*0.10;
+        alert(tip); 
+     }
+ }
+
+ waiterTip(prompt('Please enter bill amount.'));
+
+*/
+
+/*************************************************
+ * Objects & Properties
+ */
+//create the object
+/*
+ var rajan = {
+     firstName: 'Rajan',
+     lastName: 'Choudhary',
+     address:'Bangalore',
+     pin: '560100',
+     birthYear: 1992,
+     calAge: function(){
+        return 2020-this.birthYear;
+     },
+     calRetireAge: function(){
+        this.retirement = 65-this.calAge;
+     }
+ }
+
+ console.log(rajan.lastName);
+ //console.log(rajan.calRetireAge.retirement);
+ 
+ rajan.retirement= rajan.calRetireAge();
+ rajan.age = rajan.calAge();
+ console.log(rajan.retirement)
+ //Mutate the object properties.
+ rajan.pin = '560068'
+
+ console.log(rajan);
+*/
+
+/**************************************************
+ * create the object with full name, mass , height
+ * add the method to calculate the BMI into the object
+ * BMI = mass/height^2
+ */
+ 
+/*
+ var person = {
+    fullName:'Rajan Choudhary',
+    mass: 50,
+    height:120,
+    bmi: function(){
+        return this.mass/(this.height*this.height);
+    }
+ }
+
+ person.bmiCal= person.bmi()
+
+ console.log(person);
  */
 
+ /*****************************************************
+  * 
+  * loops - for while continue and break
+  */
+
+//For loop
+/*
+for(var i =0; i<10; i++){
+    console.log('current iterator '+i);
+}
+
+var values = ['Rajan' , 'Suman' , 1992 , 'Bangalore' , 'Delhi'];
+
+for(var i =0; i<values.length; i++){
+    console.log('current array element '+values[i]);
+}
+*/
+
+//While
+/*
+var i = 0;
+var values = ['Rajan' , 'Suman' , 1992 , 'Bangalore' , 'Delhi'];
+while(i < values.length){
+    console.log('Array index value '+values[i]);
+    i++;
+}
+*/
+
+//continue
+/*
+var values = ['Rajan' , 'Suman' , 1992 , 'Bangalore' , 'Delhi'];
+for(var i =0; i<values.length; i++){
+    //console.log('current array element '+ typeof values[i]);
+    if(typeof values[i] !== 'string') continue;
+    console.log('current array element '+ typeof values[i]);
+}
+*/
+
+//break
+/*
+var values = ['Rajan' , 'Suman' , 1992 , 'Bangalore' , 'Delhi'];
+for(var i =0; i<values.length; i++){
+    //console.log('current array element '+ typeof values[i]);
+    if(typeof values[i] !== 'string') break;
+    console.log('current array element '+ typeof values[i]);
+}
+*/
 
 
 
